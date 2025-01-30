@@ -19,6 +19,7 @@ body {
   width: 100%;
   max-width: 1000px; /* Limite la largeur sur les grands écrans */
   flex-wrap: wrap; /* Permet de revenir à la ligne sur petit écran */
+  padding: 0 20px; /* Espacement à gauche et à droite */
 }
 
 .left {
@@ -31,6 +32,21 @@ body {
   color: #1877f2;
   font-size: 50px;
   margin-bottom: 10px;
+}
+.add-language {
+  border: 1px solid rgba(0, 0, 0, 0.37); /* Bordure fine */
+  color: #000;
+  background-color: #ffffff;
+  padding: 5px 10px; /* Réduit l'espace autour du texte */
+  font-size: 14px; /* Réduit la taille du texte */
+  cursor: pointer; /* Curseur en forme de main au survol */
+  border-radius: 4px; /* Coins arrondis pour un effet plus doux */
+  transition: all 0.3s ease; /* Transition douce pour le survol */
+}
+
+.add-language:hover {
+  background-color: #f0f2f5; /* Changer la couleur de fond au survol */
+  border-color: #1877f2; /* Changer la couleur de la bordure au survol */
 }
 
 .left p {
@@ -49,6 +65,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur */
 }
 
 .right input {
@@ -60,6 +77,7 @@ body {
   font-size: 16px;
   background-color: #fff;
   color: #000;
+  box-sizing: border-box; /* Assure que le padding ne dépasse pas la largeur de l'input */
 }
 
 .right button {
@@ -111,27 +129,6 @@ body {
   z-index: 9999; /* Assure que le footer soit au-dessus des autres éléments */
 }
 
-.languages, .links {
-  margin-bottom: 5px;
-}
-
-.languages span, .links span {
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.add-language {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  color: #1877f2;
-}
-
-.copyright {
-  margin-top: 10px;
-  font-weight: bold;
-}
 /* Media Queries pour la Responsivité */
 @media (max-width: 768px) {
   .container {
@@ -160,6 +157,7 @@ body {
 
   .right input {
     font-size: 14px; /* Réduit la taille des champs de texte */
+    width: 100%; /* Assurer que l'input ne dépasse pas */
   }
 
   .right button {
