@@ -1,0 +1,205 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  position: relative;
+  top: -30%;
+  display: flex;
+  justify-content: center; /* Centrer horizontalement */
+  gap: 50px; /* Espacement entre les éléments */
+  width: 100%;
+  max-width: 1000px; /* Limite la largeur sur les grands écrans */
+  flex-wrap: wrap; /* Permet de revenir à la ligne sur petit écran */
+}
+
+.left {
+  flex: 1;
+  padding-right: 50px;
+  text-align: left; /* Alignement du texte */
+}
+
+.left h1 {
+  color: #1877f2;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.left p {
+  font-size: 20px;
+  color: #333;
+}
+
+.right {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #000;
+}
+
+.right button {
+  width: 100%;
+  padding: 12px;
+  background: #1877f2;
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  color: #1877f2;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.signup-button {
+  display: block;
+  width: 70%;
+  padding: 12px;
+  background: #42b72a;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.signup-button:hover {
+  color: #f0f2f5!important;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw; /* Utilise 100% de la largeur de la fenêtre */
+  text-align: center;
+  padding: 15px 0;
+  background-color: #ffffff;
+  color: #666;
+  font-size: 14px;
+  z-index: 9999; /* Assure que le footer soit au-dessus des autres éléments */
+}
+
+.languages, .links {
+  margin-bottom: 5px;
+}
+
+.languages span, .links span {
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.add-language {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  color: #1877f2;
+}
+
+.copyright {
+  margin-top: 10px;
+  font-weight: bold;
+}
+/* Media Queries pour la Responsivité */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Empile les colonnes verticalement */
+    gap: 30px; /* Réduit l'espacement */
+    max-width: 90%; /* Limite la largeur sur les grands écrans */
+    justify-content: center; /* Centrer horizontalement */
+    align-items: center; /* Centrer également verticalement */
+    margin: 0 15px; /* Espacement horizontal pour éviter que le contenu touche les bords */
+  }
+  
+  .left {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .left p {
+    display: none; /* Ne pas afficher le texte sur mobile */
+  }
+
+  .right {
+    width: 100%; /* La largeur devient plus flexible */
+    max-width: 360px; /* Limite la largeur pour un meilleur affichage */
+    text-align: center; /* Centrer les éléments à l'intérieur de .right */
+  }
+
+  .right input {
+    font-size: 14px; /* Réduit la taille des champs de texte */
+  }
+
+  .right button {
+    font-size: 16px; /* Réduit la taille du bouton */
+  }
+
+  .signup-button {
+    width: 100%; /* Le bouton prend toute la largeur sur mobile */
+  }
+
+  .forgot-password {
+    font-size: 12px; /* Réduit la taille du lien */
+  }
+}
+
+/* Plus petit que 480px (Écrans très petits) */
+@media (max-width: 480px) {
+  .container {
+    margin: 0 10px; /* Espacement plus petit sur les très petits écrans */
+    flex-direction: column; /* Empile les colonnes verticalement */
+    gap: 20px; /* Réduit l'espacement */
+    width: 100%; /* Limite la largeur à 100% */
+    align-items: center; /* Centrer horizontalement sur les petits écrans */
+  }
+
+  .left p {
+    display: none; /* Ne pas afficher le texte sur mobile */
+  }
+
+  .right input {
+    font-size: 12px; /* Champs de texte encore plus petits */
+  }
+
+  .right button {
+    font-size: 14px; /* Taille du bouton réduite */
+  }
+
+  .footer {
+    font-size: 8px; /* Réduit la taille du texte du footer sur mobile */
+    padding: 10px 10px; /* Espacement sur les côtés du footer */
+    margin-top: 10px; /* Ajoute un petit espace avant le footer */
+  }
+}
