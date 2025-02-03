@@ -2,9 +2,9 @@ name: Deploy React App to Render
 
 on:
   push:
-    branches: [ main ]  # Change "master" en "main"
+    branches: [ main ]  # Changer "master" en "main" si nécessaire
   pull_request:
-    branches: [ main ]  # Change "master" en "main"
+    branches: [ main ]
 
 jobs:
   deploy:
