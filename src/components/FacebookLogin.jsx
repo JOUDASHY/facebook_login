@@ -40,7 +40,7 @@ const FacebookLogin = () => {
       {/* Partie gauche */}
       <div className="left">
         <h1>facebook</h1>
-        <p>Avec Facebook, partagez et restez en contact avec votre entourage.</p>
+        <p>Avec Facebook, part   agez et restez en contact avec votre entourage.</p>
       </div>
 
       {/* Partie droite (formulaire) */}
